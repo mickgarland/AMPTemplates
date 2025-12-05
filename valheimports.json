@@ -13,13 +13,6 @@
                 "Ref": "ApplicationPort2",
                 "Name": "Steam Query Port",
                 "Description": "Port for Steam query traffic"
-            },
-            {
-                "Protocol": "UDP",
-                "Port": 2458,
-                "Ref": "ApplicationPort3",
-                "Name": "Additional Game Port",
-                "Description": "Auxiliary port used by Valheim dedicated servers"
             }
         ]
     }
