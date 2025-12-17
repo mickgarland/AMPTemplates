@@ -1,18 +1,8 @@
 [
-    {
-        "ConfigFile": "./BepInEx/config/valheim_plus.cfg",
-        "AutoMap": true,
-        "Importable": true,
-        "ConfigType": "ini",
-        "ConfigFormat": "{0}={1}",
-        "ConfigFormatRegex": "^(?<key>.+?)=(?<value>.*?)$"
-    },
-    {
-        "ConfigFile": "./BepInEx/config/valheim_plus.cfg",
-        "AutoMap": true,
-        "Importable": true,
-        "ConfigType": "ini",
-        "ConfigFormat": "{0} = {1}",
-        "ConfigFormatRegex": "^(?<key>.+?) = (?<value>.*?)$"
-    }
+  {
+    "FilePath": "BepInEx/config/valheim_plus.cfg",
+    "ConfigType": "Ini",
+    "AutoMap": true,
+    "Description": "Valheim Plus configuration (Grantapher fork, v0.9.16.2)"
+  }
 ]
