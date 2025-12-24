@@ -1,5 +1,5 @@
 Meta.DisplayName=Valheim
-Meta.Description=Includes optional support for ValheimPlus and BepinEx
+Meta.Description=Includes optional support for BepinEx
 Meta.OS=Windows, Linux
 Meta.AarchSupport=Unknown
 Meta.Arch=x86_64

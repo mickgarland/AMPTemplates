@@ -9,42 +9,6 @@
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "ValheimPlus Download",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "GithubRelease",
-        "UpdateSourceArgs": "Grantapher/ValheimPlus",
-        "UpdateSourceData": "WindowsServer.zip",
-        "UpdateSourceConditionSetting": "valheim_plus_install",
-        "UpdateSourceConditionValue": "true",
-        "UnzipUpdateSource": true,
-        "OverwriteExistingFiles": true,
-        "SkipOnFailure": false
-    },
-    {
-        "UpdateStageName": "ValheimPlus Download",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "GithubRelease",
-        "UpdateSourceArgs": "Grantapher/ValheimPlus",
-        "UpdateSourceData": "UnixServer.zip",
-        "UpdateSourceConditionSetting": "valheim_plus_install",
-        "UpdateSourceConditionValue": "true",
-        "UnzipUpdateSource": true,
-        "OverwriteExistingFiles": true,
-        "SkipOnFailure": false
-    },
-    {
-        "UpdateStageName": "Settings File Download",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "GithubRelease",
-        "UpdateSourceArgs": "Grantapher/ValheimPlus",
-        "UpdateSourceData": "valheim_plus.cfg",
-        "UpdateSourceTarget": "{{$FullBaseDir}}BepInEx/config",
-        "OverwriteExistingFiles": false,
-        "UpdateSourceConditionSetting": "valheim_plus_install",
-        "UpdateSourceConditionValue": "true",
-        "SkipOnFailure": false
-    },
-    {
         "UpdateStageName": "BepInEx Download",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
