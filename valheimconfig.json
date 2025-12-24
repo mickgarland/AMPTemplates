@@ -25,16 +25,32 @@
         "DefaultValue": "PoweredByAMP"
     },
     {
+        "DisplayName": "Enable password",
+        "Description": "When enabled, AMP will pass -password \"password\", when disabled will omit -password",
+        "FieldName": "EnablePassword",
+        "InputType": "checkbox",
+        "Category": "Server",
+        "IsFlagArgument": true,
+        "ParamFieldName": "EnablePassword",
+        "IncludeInCommandLine": true,
+        "InputType": "checkbox",
+        "EnumValues": {
+            "True": "-password \"{{password}}\"",
+            "False": ""
+        },
+        "DefaultValue": "-password \"{{password}}\""
+    },
+    {
         "DisplayName": "Server Password",
-        "Description": "Password that clients must supply in order to connect. NOTE: Unless a mod is used to remove the need for a password, the server requires a password that is at least 5 characters long and that is not included in the server name. Default: 12345.",
+        "Description": "Minimum 5 chars. Ignored if 'Enable password' is disabled.",
         "FieldName": "ServerPassword",
         "InputType": "password",
-        "Category": "Valheim:stadia_controller",
-        "Subcategory": "General:dns:1",
+        "Category": "Server",
+        "IsFlagArgument": false,
         "ParamFieldName": "password",
         "IncludeInCommandLine": false,
-        "DefaultValue": "12345",
-        "Placeholder": "12345"
+        "SkipIfEmpty": true,
+        "DefaultValue": "12345"
     },
     {
         "DisplayName": "Server is Public",
