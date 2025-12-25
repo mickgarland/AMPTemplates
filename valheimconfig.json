@@ -335,6 +335,20 @@
         "Suffix": "seconds"
     },
     {
+        "DisplayName": "Additonal Commanad Line Parameters",
+        "Description": "Add any required additional command line parameters here",
+        "FieldName": "additionalparams",
+        "Keywords": "cli,parameters",
+        "InputType": "text",
+        "Category": "Valheim:stadia_controller",
+        "Subcategory": "General:dns:1",
+        "ParamFieldName": "additionalparams",
+        "IncludeInCommandLine": true,
+        "Required": false,
+        "SkipIfEmpty": true,        
+        "DefaultValue": ""
+    },
+    {
         "DisplayName": "Server Branch",
         "Category": "Updates",
         "Subcategory": "Steam Downloads:download",
