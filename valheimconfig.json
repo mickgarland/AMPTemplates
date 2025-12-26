@@ -34,7 +34,6 @@
         "IsFlagArgument": true,
         "ParamFieldName": "enablepassword",
         "IncludeInCommandLine": true,
-        "InputType": "checkbox",
         "EnumValues": {
             "True": "-password \"{{password}}\"",
             "False": ""
