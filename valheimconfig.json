@@ -341,7 +341,8 @@
         "InputType": "text",
         "Category": "Valheim:stadia_controller",
         "Subcategory": "General:dns:1",
-        "IncludeInCommandLine": true,
+        "ParamFieldName": "additionalparams",        
+        "IncludeInCommandLine": false,
         "Required": false,
         "SkipIfEmpty": true,        
         "DefaultValue": ""
