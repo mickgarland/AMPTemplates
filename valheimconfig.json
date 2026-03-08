@@ -141,10 +141,8 @@
         "InputType": "enum",
         "ParamFieldName": "preset",
         "IncludeInCommandLine": true,
-        "SkipIfEmpty": true,
         "DefaultValue": "normal",
         "EnumValues": {
-            "": "No World Modifier Preset",
             "normal": "Normal (default)",
             "casual": "Casual",
             "easy": "Easy",
