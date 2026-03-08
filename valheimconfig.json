@@ -84,6 +84,36 @@
         "DefaultValue": ""
     },
     {
+        "DisplayName": "Enable Headless Mode",
+        "Description": "When enabled, the server will run in headless mode, using the -nographics parameter.",
+        "FieldName": "nographics",
+        "Category": "Valheim:stadia_controller",
+        "Subcategory": "General:dns:1",
+        "ParamFieldName": "nographics",
+        "IncludeInCommandLine": false,
+        "InputType": "checkbox",
+        "EnumValues": {
+            "True": "-nographics",
+            "False": ""
+        },
+        "DefaultValue": ""
+    }, 
+    {
+        "DisplayName": "Enable Batch Mode",
+        "Description": "When enabled, the server will run in batch mode automating any user prompts, using the -batchmode parameter.",
+        "FieldName": "batchmode",
+        "Category": "Valheim:stadia_controller",
+        "Subcategory": "General:dns:1",
+        "ParamFieldName": "batchmode",
+        "IncludeInCommandLine": false,
+        "InputType": "checkbox",
+        "EnumValues": {
+            "True": "-batchmode",
+            "False": ""
+        },
+        "DefaultValue": ""
+    },       
+    {
         "DisplayName": "Admin Players",
         "Description": "A list of Steam64 IDs for players that are in-game admins. [Find your Steam64 ID](https://steamid.io/)",
         "FieldName": "AdminPlayers",
@@ -111,8 +141,10 @@
         "InputType": "enum",
         "ParamFieldName": "preset",
         "IncludeInCommandLine": true,
+        "SkipIfEmpty": true,
         "DefaultValue": "normal",
         "EnumValues": {
+            "": "No World Modifier Preset",
             "normal": "Normal (default)",
             "casual": "Casual",
             "easy": "Easy",
