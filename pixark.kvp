@@ -38,7 +38,7 @@ App.WindowsCommandLineArgs=
 App.CommandLineArgs={{$PlatformArgs}} {{Map}}?listen?DelayRegisterServer=True?bRawSockets=True?Port={{$GamePort}}?QueryPort={{$QueryPort}}?RCONEnabled=True?RCONPort={{$RCONPort}}?SessionName="{{SessionName}}"?MultiHome={{$ApplicationIPBinding}}?{{$FormattedArgs}}?ServerAdminPassword={{$RemoteAdminPassword}}{{CustomOptions}} -Seed={{Seed}} -CULTUREFORCOOKING=en -NoBattlEye -CubePort={{$CubePort}} -cubeworld={{cubeworld}} -nosteamclient -NoHangDetection {{NoTransferFromFiltering}}-ClusterDirOverride="{{ClusterDirOverride}}" -clusterid={{clusterid}} -server {{CustomFlags}} -gameplaylogging -log
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
-App.EnvironmentVariables={"SteamAppId":"593600","STEAM_COMPAT_DATA_PATH":"{{$FullRootDir}}.proton/compatdata","STEAM_COMPAT_CLIENT_INSTALL_PATH":"{{$FullBaseDir}}.steam/steam","HOME":"{{$FullBaseDir}}","XDG_RUNTIME_DIR":"/tmp"}
+App.EnvironmentVariables={"SteamAppId":"593600","STEAM_COMPAT_DATA_PATH":"{{$FullRootDir}}.proton/compatdata","STEAM_COMPAT_CLIENT_INSTALL_PATH":"{{$FullBaseDir}}.steam/steam","HOME":"{{$FullBaseDir}}"}
 App.CommandLineParameterFormat={0}={1}
 App.CommandLineParameterDelimiter=?
 App.ExitMethod=String
@@ -80,7 +80,7 @@ App.MonitorChildProcessName=^.*PixARKServer\.exe.*Port={{$GamePort}}.*$
 App.SupportsUniversalSleep=False
 App.WakeupMode=Any
 App.ApplicationReadyMode=RCONConnected
-Console.FilterMatchRegex=(\e\[(\d+;)*(\d+)?[ABCDHJKfmsu]|\e\[?[?\>\=\da-z]+|Keep Alive|Server received, But no response!! \n |LogOnline:Warning: STEAM: Server setting .* overflows Steam SetGameTags call|LogOnline:Warning: STEAM: Empty session setting .* :OnlineService of type String|CubeWorldServer:Warning: compose_generator.cpp \d+ cubesvr::CComposeGenerator::ComposeColumn  biome not exists\. \d+|LogShooter:Warning: Receive Command : GetGameLog)
+Console.FilterMatchRegex=(\e\[(\d+;)*(\d+)?[ABCDHJKfmsu]|\e\[?[?\>\=\da-z]+|Keep Alive|Server received, But no response!! \n |LogOnline:Warning: STEAM: Server setting .* overflows Steam SetGameTags call|LogOnline:Warning: STEAM: Empty session setting .* :OnlineService of type String|CubeWorldServer:Warning: compose_generator.cpp \d+ cubesvr::CComposeGenerator::ComposeColumn  biome not exists\. \d+|LogShooter:Warning: Receive Command : GetGameLog|ProtonFixes\[\d+\] WARN: Skipping fix execution\. We are probably running a unit test\.)
 Console.FilterMatchReplacement=
 Console.ThrowawayMessageRegex=
 Console.AppReadyRegex=^$
