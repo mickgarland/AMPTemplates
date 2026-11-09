@@ -1,11 +1,11 @@
 [
     {
         "DisplayName": "Server Name",
+        "Category": "Valheim:stadia_controller",
+        "Subcategory": "General:dns:1",
         "Description": "Server name as it appears in the server list",
         "FieldName": "ServerName",
         "InputType": "text",
-        "Category": "Valheim:stadia_controller",
-        "Subcategory": "General:dns:1",
         "ParamFieldName": "name",
         "IncludeInCommandLine": false,
         "Required": true,
@@ -13,12 +13,12 @@
     },
     {
         "DisplayName": "World Name",
-        "Description": "Name of the world .db file to load. Also used as the random seed used for terrain random generation",
-        "FieldName": "WorldName",
-        "Keywords": "world,seed,db",
-        "InputType": "text",
         "Category": "Valheim:stadia_controller",
         "Subcategory": "General:dns:1",
+        "Description": "Name of the world .db file to load. Also used as the random seed used for terrain random generation",
+        "Keywords": "world,seed,db",
+        "FieldName": "WorldName",
+        "InputType": "text",
         "ParamFieldName": "world",
         "IncludeInCommandLine": false,
         "Required": true,
@@ -42,7 +42,7 @@
     },
     {
         "DisplayName": "Server Password",
-        "Description": "Minimum 5 chars. Ignored if 'Enable password' is disabled.",
+        "Description": "Password that clients must supply in order to connect. Minimum 5 chars. Ignored if 'Enable password' is disabled.",
         "FieldName": "ServerPassword",
         "InputType": "password",
         "Category": "Valheim:stadia_controller",
@@ -55,13 +55,13 @@
     },
     {
         "DisplayName": "Server is Public",
-        "Description": "Whether or not the server appears on the server list. Disable for a LAN-only server.",
-        "FieldName": "ServerPublic",
         "Category": "Valheim:stadia_controller",
         "Subcategory": "General:dns:1",
+        "Description": "Whether or not the server appears on the server list. Disable for a LAN-only server.",
+        "FieldName": "ServerPublic",
+        "InputType": "checkbox",
         "ParamFieldName": "public",
         "IncludeInCommandLine": true,
-        "InputType": "checkbox",
         "DefaultValue": "1",
         "EnumValues": {
             "True": "1",
@@ -70,18 +70,18 @@
     },
     {
         "DisplayName": "Enable Crossplay",
-        "Description": "When enabled, the backend will be running Playfab instead of Steamworks. A \"Join code\" will appear when you join a Dedicated server supporting crossplay. Players can use this code to join the server. This Join code is regenerated whenever the server is restarted.",
-        "FieldName": "crossplay",
         "Category": "Valheim:stadia_controller",
         "Subcategory": "General:dns:1",
+        "Description": "When enabled, the backend will be running Playfab instead of Steamworks. A \"Join code\" will appear when you join a Dedicated server supporting crossplay. Players can use this code to join the server. This Join code is regenerated whenever the server is restarted.",
+        "FieldName": "crossplay",
+        "InputType": "checkbox",
         "ParamFieldName": "crossplay",
         "IncludeInCommandLine": false,
-        "InputType": "checkbox",
+        "DefaultValue": "",
         "EnumValues": {
             "True": "-crossplay",
             "False": ""
-        },
-        "DefaultValue": ""
+        }
     },
     {
         "DisplayName": "Enable Headless Mode",
@@ -115,19 +115,19 @@
     },       
     {
         "DisplayName": "Admin Players",
-        "Description": "A list of Steam64 IDs for players that are in-game admins. [Find your Steam64 ID](https://steamid.io/)",
-        "FieldName": "AdminPlayers",
         "Category": "Valheim:stadia_controller",
         "Subcategory": "General:dns:1",
+        "Description": "A list of Steam64 IDs for players that are in-game admins. [Find your Steam64 ID](https://steamid.io/)",
+        "FieldName": "AdminPlayers",
         "InputType": "list",
         "Special": "listfile:./Valheim/896660/Saves/adminlist.txt"
     },
     {
         "DisplayName": "Permitted Players",
-        "Description": "A list of Steam64 IDs for players that are permitted in-game. [Find your Steam64 ID](https://steamid.io/)",
-        "FieldName": "PermittedPlayers",
         "Category": "Valheim:stadia_controller",
         "Subcategory": "General:dns:1",
+        "Description": "A list of Steam64 IDs for players that are permitted in-game. [Find your Steam64 ID](https://steamid.io/)",
+        "FieldName": "PermittedPlayers",
         "InputType": "list",
         "Special": "listfile:./Valheim/896660/Saves/permittedlist.txt"
     },
@@ -341,10 +341,10 @@
     },
     {
         "DisplayName": "Banned Players",
-        "Description": "A list of Steam64 IDs for players that are banned [Find a Steam64 ID](https://steamid.io/)",
-        "FieldName": "BannedPlayers",
         "Category": "Valheim:stadia_controller",
         "Subcategory": "General:dns:1",
+        "Description": "A list of Steam64 IDs for players that are banned [Find a Steam64 ID](https://steamid.io/)",
+        "FieldName": "BannedPlayers",
         "InputType": "list",
         "Special": "listfile:./Valheim/896660/Saves/bannedlist.txt"
     },
@@ -353,15 +353,15 @@
         "Category": "Valheim:stadia_controller",
         "Subcategory": "General:dns:1",
         "Description": "Changes how often the world is saved in seconds. Default is 1800 seconds (30 minutes).",
-        "Keywords": "save,autosave,interval,time,timer,frequency",
+        "Keywords": "save,autosave,interval,time,timer,frequency,saveinterval",
         "FieldName": "saveinterval",
         "InputType": "number",
         "ParamFieldName": "saveinterval",
         "IncludeInCommandLine": true,
         "SkipIfEmpty": true,
         "DefaultValue": "1800",
-        "EnumValues": {},
-        "Suffix": "seconds"
+        "Suffix": "seconds",
+        "EnumValues": {}
     },
     {
         "DisplayName": "Additonal Commanad Line Parameters",
@@ -382,7 +382,7 @@
         "Category": "Updates",
         "Subcategory": "Steam Downloads:download",
         "Description": "Sets the server branch to install. NOTE: Update the server after switching branches.",
-        "Keywords": "server,branch,beta,public,default_old,default_preml,default_precta,default_prebw,default_preal",
+        "Keywords": "server,branch,beta,public,default_old,default_preml,default_precta,default_prebw,default_preal,Stream",
         "FieldName": "Stream",
         "InputType": "enum",
         "IsFlagArgument": false,
@@ -392,6 +392,7 @@
         "EnumValues": {
             "public": "Public (default)",
             "default_old": "Previous stable",
+            "default_pre1_0": "Last stable build before version 1.0",
             "default_preml": "Last stable build before Mistlands",
             "default_precta": "Last stable build before Call to Arms",
             "default_prebw": "Last stable build before Bog Witch",
@@ -403,7 +404,7 @@
         "Category": "Updates",
         "Subcategory": "Runtime Configuration:build:3",
         "Description": "If set, BepInEx will be installed when the server is updated. Configure \"BepInEx Version\" accordingly. Standalone - DO NOT use with the Install Valheim Plus option. NOTE: Update the server after enabling this option.",
-        "Keywords": "Install,BepInEx",
+        "Keywords": "Install,BepInEx,bepinex_install",
         "FieldName": "bepinex_install",
         "InputType": "checkbox",
         "IsFlagArgument": false,
@@ -420,14 +421,14 @@
         "Category": "Updates",
         "Subcategory": "Runtime Configuration:build:3",
         "Description": "Sets the [BepInEx version](https://thunderstore.io/c/valheim/p/denikson/BepInExPack_Valheim/versions/) to install. Empty = latest. NOTE: Update the server after switching versions!",
-        "Keywords": "Install,BepInEx,version",
+        "Keywords": "Install,BepInEx,Version,bepinex_version",
         "FieldName": "bepinex_version",
         "InputType": "text",
         "IsFlagArgument": false,
         "ParamFieldName": "bepinex_version",
         "IncludeInCommandLine": false,
         "DefaultValue": "",
-        "Placeholder": "5.4.2333",
+        "Placeholder": "5.4.2360",
         "EnumValues": {}
     }
 ]

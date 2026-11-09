@@ -46,8 +46,9 @@
         "Description": "Sets the admin password, allowing access to the Server Management tab in-game. Default is a secure random password",
         "Keywords": "admin,password,adminpassword",
         "FieldName": "AdminPassword",
-        "InputType": "password",
-        "ParamFieldName": "/Script/Dominion.DedicatedServerSettings.AdminPassword",
+        "InputType": "Password",
+        "ParamFieldName": "ini:DedicatedServer:[/Script/Dominion.DedicatedServerSettings]:AdminPassword",
+        "IncludeInCommandLine": true,
         "DefaultValue": "{{newguid()}}",
         "Required": true,
         "EnumValues": {}
@@ -59,7 +60,7 @@
         "Description": "Sets the password required to join the server. Empty = no password",
         "Keywords": "world,password,worldpassword",
         "FieldName": "WorldPassword",
-        "InputType": "password",
+        "InputType": "Password",
         "ParamFieldName": "/Script/Dominion.DedicatedServerSettings.WorldPassword",
         "DefaultValue": "",
         "EnumValues": {}

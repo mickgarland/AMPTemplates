@@ -60,21 +60,35 @@
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
         "UpdateSourceConditionSetting": "ModMode",
-        "UpdateSourceConditionValue": "-EACEnabled=false -RecipeFilter={{RecipeFilter}} -StarterQuestEnabled={{StarterQuestEnabled}} -WanderingHordeFrequency={{WanderingHordeFrequency}} -WanderingHordeRange={{WanderingHordeRange}} -WanderingHordeEnemyCount={{WanderingHordeEnemyCount}} -WanderingHordeEnemyRange={{WanderingHordeEnemyRange}} -DeathPenalty={{UndeadLegacyDeathPenalty}} -POITierLootScale={{POITierLootScale}} ",
+        "UpdateSourceConditionValue": "-EACEnabled=false -RecipeFilter={{RecipeFilter}} -StarterQuestEnabled={{BasicSurvivalChallenges}} -WanderingHordeFrequency={{WanderingHordeFrequency}} -WanderingHordeRange={{WanderingHordeRange}} -WanderingHordeEnemyCount={{WanderingHordeEnemyCount}} -WanderingHordeEnemyRange={{WanderingHordeEnemyRange}} -DeathPenalty={{DeathPenalty}} -POITierLootScale={{POITierLootScale}} ",
         "DeleteAfterExtract": true,
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Download Undead Legacy Experimental",
+        "UpdateStageName": "Download Undead Legacy Experimental Part 1",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://ul.subquake.com/dl?v=exp",
-        "UpdateSourceArgs": "UndeadLegacyExperimental.zip",
+        "UpdateSourceData": "https://ul.subquake.com/dl?v=exp_part1",
+        "UpdateSourceArgs": "UndeadLegacyExperimentalPart1.zip",
         "UpdateSourceTarget": "{{$FullBaseDir}}",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
         "UpdateSourceConditionSetting": "ModMode",
-        "UpdateSourceConditionValue": "-RecipeFilter={{RecipeFilter}} -StarterQuestEnabled={{StarterQuestEnabled}} -WanderingHordeFrequency={{WanderingHordeFrequency}} -WanderingHordeRange={{WanderingHordeRange}} -WanderingHordeEnemyCount={{WanderingHordeEnemyCount}} -WanderingHordeEnemyRange={{WanderingHordeEnemyRange}} -DeathPenalty={{UndeadLegacyDeathPenalty}} -POITierLootScale={{POITierLootScale}} -EACEnabled=false ",
+        "UpdateSourceConditionValue": "-EACEnabled=false -RecipeFilter={{RecipeFilter}} -BasicSurvivalChallenges={{BasicSurvivalChallenges}} -WanderingHordeFrequency={{WanderingHordeFrequency}} -WanderingHordeRange={{WanderingHordeRange}} -WanderingHordeEnemyCount={{WanderingHordeEnemyCount}} -WanderingHordeEnemyRange={{WanderingHordeEnemyRange}} -DeathPenalty2={{DeathPenalty2}} -POITierLootScale={{POITierLootScale}} -DuskTime={{DuskTime}} -DawnTime={{DawnTime}} -AmbientLightLevel={{AmbientLightLevel}} -OverrideBrightness={{OverrideBrightness}} -ActionSkillXPMultiplier={{ActionSkillXPMultiplier}} -TraderMissionCooldown={{TraderMissionCooldown}} -AIZombieRageChance={{AIZombieRageChance}} -AIHeatMapScoutsEnabled={{AIHeatMapScoutsEnabled}} -AIZombieDiggingEnabled={{AIZombieDiggingEnabled}} -AIGroupDamageBoost={{AIGroupDamageBoost}} ",
+        "DeleteAfterExtract": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Download Undead Legacy Experimental Part 2",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://ul.subquake.com/dl?v=exp_part2",
+        "UpdateSourceArgs": "UndeadLegacyExperimentalPart2.zip",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
+        "UpdateSourceConditionSetting": "ModMode",
+        "UpdateSourceConditionValue": "-EACEnabled=false -RecipeFilter={{RecipeFilter}} -BasicSurvivalChallenges={{BasicSurvivalChallenges}} -WanderingHordeFrequency={{WanderingHordeFrequency}} -WanderingHordeRange={{WanderingHordeRange}} -WanderingHordeEnemyCount={{WanderingHordeEnemyCount}} -WanderingHordeEnemyRange={{WanderingHordeEnemyRange}} -DeathPenalty2={{DeathPenalty2}} -POITierLootScale={{POITierLootScale}} -DuskTime={{DuskTime}} -DawnTime={{DawnTime}} -AmbientLightLevel={{AmbientLightLevel}} -OverrideBrightness={{OverrideBrightness}} -ActionSkillXPMultiplier={{ActionSkillXPMultiplier}} -TraderMissionCooldown={{TraderMissionCooldown}} -AIZombieRageChance={{AIZombieRageChance}} -AIHeatMapScoutsEnabled={{AIHeatMapScoutsEnabled}} -AIZombieDiggingEnabled={{AIZombieDiggingEnabled}} -AIGroupDamageBoost={{AIGroupDamageBoost}} ",
         "DeleteAfterExtract": true,
         "SkipOnFailure": false
     },
@@ -83,9 +97,9 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "cmd.exe",
-        "UpdateSourceArgs": "/C move seven-days-to-die\\294420\\UndeadLegacyStable* seven-days-to-die\\294420\\UndeadLegacyStable && xcopy /E /Y /I seven-days-to-die\\294420\\UndeadLegacyStable\\* seven-days-to-die\\294420\\ && rmdir /Q /S seven-days-to-die\\294420\\UndeadLegacyStable",
+        "UpdateSourceArgs": "/C move \"{{$FullBaseDir}}UndeadLegacyStable*\" \"{{$FullBaseDir}}UndeadLegacyStable\" && xcopy /E /Y /I \"{{$FullBaseDir}}UndeadLegacyStable\\*\" \"{{$FullBaseDir}}.\" && rmdir /Q /S \"{{$FullBaseDir}}UndeadLegacyStable\"",
         "UpdateSourceConditionSetting": "ModMode",
-        "UpdateSourceConditionValue": "-EACEnabled=false -RecipeFilter={{RecipeFilter}} -StarterQuestEnabled={{StarterQuestEnabled}} -WanderingHordeFrequency={{WanderingHordeFrequency}} -WanderingHordeRange={{WanderingHordeRange}} -WanderingHordeEnemyCount={{WanderingHordeEnemyCount}} -WanderingHordeEnemyRange={{WanderingHordeEnemyRange}} -DeathPenalty={{UndeadLegacyDeathPenalty}} -POITierLootScale={{POITierLootScale}} ",
+        "UpdateSourceConditionValue": "-EACEnabled=false -RecipeFilter={{RecipeFilter}} -StarterQuestEnabled={{BasicSurvivalChallenges}} -WanderingHordeFrequency={{WanderingHordeFrequency}} -WanderingHordeRange={{WanderingHordeRange}} -WanderingHordeEnemyCount={{WanderingHordeEnemyCount}} -WanderingHordeEnemyRange={{WanderingHordeEnemyRange}} -DeathPenalty={{DeathPenalty}} -POITierLootScale={{POITierLootScale}} ",
         "SkipOnFailure": false
     },
     {
@@ -93,9 +107,9 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cp -rf ./seven-days-to-die/294420/UndeadLegacyStable*/* ./seven-days-to-die/294420/ && rm -rf ./seven-days-to-die/294420/UndeadLegacyStable*/\"",
+        "UpdateSourceArgs": "-c \"cp -rf '{{$FullBaseDir}}'UndeadLegacyStable*/* '{{$FullBaseDir}}' && rm -rf '{{$FullBaseDir}}'UndeadLegacyStable*/\"",
         "UpdateSourceConditionSetting": "ModMode",
-        "UpdateSourceConditionValue": "-EACEnabled=false -RecipeFilter={{RecipeFilter}} -StarterQuestEnabled={{StarterQuestEnabled}} -WanderingHordeFrequency={{WanderingHordeFrequency}} -WanderingHordeRange={{WanderingHordeRange}} -WanderingHordeEnemyCount={{WanderingHordeEnemyCount}} -WanderingHordeEnemyRange={{WanderingHordeEnemyRange}} -DeathPenalty={{UndeadLegacyDeathPenalty}} -POITierLootScale={{POITierLootScale}} ",
+        "UpdateSourceConditionValue": "-EACEnabled=false -RecipeFilter={{RecipeFilter}} -StarterQuestEnabled={{BasicSurvivalChallenges}} -WanderingHordeFrequency={{WanderingHordeFrequency}} -WanderingHordeRange={{WanderingHordeRange}} -WanderingHordeEnemyCount={{WanderingHordeEnemyCount}} -WanderingHordeEnemyRange={{WanderingHordeEnemyRange}} -DeathPenalty={{DeathPenalty}} -POITierLootScale={{POITierLootScale}} ",
         "SkipOnFailure": false
     },
     {
@@ -103,9 +117,9 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "cmd.exe",
-        "UpdateSourceArgs": "/C move seven-days-to-die\\294420\\UndeadLegacyExperimental* seven-days-to-die\\294420\\UndeadLegacyExperimental && xcopy /E /Y /I seven-days-to-die\\294420\\UndeadLegacyExperimental\\* seven-days-to-die\\294420\\ && rmdir /Q /S seven-days-to-die\\294420\\UndeadLegacyExperimental",
+        "UpdateSourceArgs": "/C move \"{{$FullBaseDir}}UndeadLegacyExperimental*\" \"{{$FullBaseDir}}UndeadLegacyExperimental\" && xcopy /E /Y /I \"{{$FullBaseDir}}UndeadLegacyExperimental\\*\" \"{{$FullBaseDir}}.\" && rmdir /Q /S \"{{$FullBaseDir}}UndeadLegacyExperimental\"",
         "UpdateSourceConditionSetting": "ModMode",
-        "UpdateSourceConditionValue": "-RecipeFilter={{RecipeFilter}} -StarterQuestEnabled={{StarterQuestEnabled}} -WanderingHordeFrequency={{WanderingHordeFrequency}} -WanderingHordeRange={{WanderingHordeRange}} -WanderingHordeEnemyCount={{WanderingHordeEnemyCount}} -WanderingHordeEnemyRange={{WanderingHordeEnemyRange}} -DeathPenalty={{UndeadLegacyDeathPenalty}} -POITierLootScale={{POITierLootScale}} -EACEnabled=false ",
+        "UpdateSourceConditionValue": "-EACEnabled=false -RecipeFilter={{RecipeFilter}} -BasicSurvivalChallenges={{BasicSurvivalChallenges}} -WanderingHordeFrequency={{WanderingHordeFrequency}} -WanderingHordeRange={{WanderingHordeRange}} -WanderingHordeEnemyCount={{WanderingHordeEnemyCount}} -WanderingHordeEnemyRange={{WanderingHordeEnemyRange}} -DeathPenalty2={{DeathPenalty2}} -POITierLootScale={{POITierLootScale}} -DuskTime={{DuskTime}} -DawnTime={{DawnTime}} -AmbientLightLevel={{AmbientLightLevel}} -OverrideBrightness={{OverrideBrightness}} -ActionSkillXPMultiplier={{ActionSkillXPMultiplier}} -TraderMissionCooldown={{TraderMissionCooldown}} -AIZombieRageChance={{AIZombieRageChance}} -AIHeatMapScoutsEnabled={{AIHeatMapScoutsEnabled}} -AIZombieDiggingEnabled={{AIZombieDiggingEnabled}} -AIGroupDamageBoost={{AIGroupDamageBoost}} ",
         "SkipOnFailure": false
     },
     {
@@ -113,9 +127,9 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cp -rf ./seven-days-to-die/294420/UndeadLegacyExperimental*/* ./seven-days-to-die/294420/ && rm -rf ./seven-days-to-die/294420/UndeadLegacyExperimental*/\"",
+        "UpdateSourceArgs": "-c \"cp -rf '{{$FullBaseDir}}'UndeadLegacyExperimental*/* '{{$FullBaseDir}}' && rm -rf '{{$FullBaseDir}}'UndeadLegacyExperimental*/\"",
         "UpdateSourceConditionSetting": "ModMode",
-        "UpdateSourceConditionValue": "-RecipeFilter={{RecipeFilter}} -StarterQuestEnabled={{StarterQuestEnabled}} -WanderingHordeFrequency={{WanderingHordeFrequency}} -WanderingHordeRange={{WanderingHordeRange}} -WanderingHordeEnemyCount={{WanderingHordeEnemyCount}} -WanderingHordeEnemyRange={{WanderingHordeEnemyRange}} -DeathPenalty={{UndeadLegacyDeathPenalty}} -POITierLootScale={{POITierLootScale}} -EACEnabled=false ",
+        "UpdateSourceConditionValue": "-EACEnabled=false -RecipeFilter={{RecipeFilter}} -BasicSurvivalChallenges={{BasicSurvivalChallenges}} -WanderingHordeFrequency={{WanderingHordeFrequency}} -WanderingHordeRange={{WanderingHordeRange}} -WanderingHordeEnemyCount={{WanderingHordeEnemyCount}} -WanderingHordeEnemyRange={{WanderingHordeEnemyRange}} -DeathPenalty2={{DeathPenalty2}} -POITierLootScale={{POITierLootScale}} -DuskTime={{DuskTime}} -DawnTime={{DawnTime}} -AmbientLightLevel={{AmbientLightLevel}} -OverrideBrightness={{OverrideBrightness}} -ActionSkillXPMultiplier={{ActionSkillXPMultiplier}} -TraderMissionCooldown={{TraderMissionCooldown}} -AIZombieRageChance={{AIZombieRageChance}} -AIHeatMapScoutsEnabled={{AIHeatMapScoutsEnabled}} -AIZombieDiggingEnabled={{AIZombieDiggingEnabled}} -AIGroupDamageBoost={{AIGroupDamageBoost}} ",
         "SkipOnFailure": false
     },
     {

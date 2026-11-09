@@ -2095,6 +2095,20 @@
         "Hidden": true
     },
     {
+        "DisplayName": "API Port",
+        "Category": "V Rising - Host Settings",
+        "Description": "TCP port for API features",
+        "Keywords": "",
+        "FieldName": "$APIPort",
+        "InputType": "number",
+        "IsFlagArgument": false,
+        "ParamFieldName": "API.BindPort",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {},
+        "Hidden": true
+    },
+    {
         "DisplayName": "RCON Port",
         "Category": "V Rising:stadia_controller",
         "Subcategory": "Host:dns:7",
@@ -2238,7 +2252,7 @@
         "Keywords": "server, password",
         "FieldName": "Password",
         "DefaultValue": "",
-        "InputType": "password",
+        "InputType": "Password",
         "IsFlagArgument": false,
         "ParamFieldName": "Password",
         "IncludeInCommandLine": false
@@ -2504,6 +2518,19 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "",
         "Placeholder": "1.691.3",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Proton GE Release Version (Linux)",
+        "Category": "Updates",
+        "Subcategory": "Runtime Configuration:build:3",
+        "Description": "Sets the Proton GE [release version](https://github.com/GloriousEggroll/proton-ge-custom/releases) to install. Empty = latest. Example: GE-Proton9-1",
+        "Keywords": "proton,release,version",
+        "FieldName": "SpecificReleaseVersion",
+        "InputType": "text",
+        "ParamFieldName": "SpecificReleaseVersion",
+        "DefaultValue": "",
+        "Placeholder": "GE-Proton9-1",
         "EnumValues": {}
     }
 ]
